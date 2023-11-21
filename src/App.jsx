@@ -26,7 +26,7 @@ function App() {
       background
       bgAttachment="fixed"
     >
-      <Box color="white" display="flex">
+      <Box color="white" display="flex" position="fixed">
         <Link href="#about" paddingRight="40px">
           About Me
         </Link>
@@ -37,12 +37,13 @@ function App() {
         align="center"
         justify="center"
         direction="column"
-        height="100vh"
+        minHeight="100vh"
         scrollBehavior="smooth"
       >
         <Heading
           bgGradient="linear(to-r, gray.300, yellow.400, pink.200)"
           bgClip="text"
+          paddingTop="30px"
         >
           {" "}
           Hello Buddy!!! Welcome To My Site!!!
@@ -56,6 +57,7 @@ function App() {
           direction="row"
           padding="1rem"
           gap="3rem"
+          wrap="wrap"
         >
           <Image
             boxSize="380px"
@@ -122,11 +124,17 @@ function App() {
                 Name :
               </Text>
               <Text>ALWI</Text>
-              <Text fontWeight="bold">Date Birth :</Text>
+              <Text fontWeight="bold" as="u">
+                Date Birth :
+              </Text>
               <Text>05/Dec/1996</Text>
-              <Text fontWeight="bold">Address :</Text>
+              <Text fontWeight="bold" as="u">
+                Address :
+              </Text>
               <Text>Condet Jakarta Timur</Text>
-              <Text fontWeight="bold">Contact me on :</Text>
+              <Text fontWeight="bold" as="u">
+                Contact me on :
+              </Text>
               <Text>📷 @mynameiswe </Text>
               <Text>📧 mynamealwikaff@gmail.com </Text>
               <Text>📞 +62-812-8084-6792 </Text>
@@ -151,32 +159,48 @@ function App() {
         >
           My Skills
         </Heading>
-        <SimpleGrid columns="4" spacing="150px">
-          <Image boxSize="128px" objectFit="cover" src="/a.png" rounded="xl" />
-          <Image boxSize="128px" objectFit="cover" src="/b.png" rounded="xl" />
-          <Image boxSize="128px" objectFit="cover" src="/c.png" rounded="xl" />
-          <Image boxSize="128px" objectFit="cover" src="/d.png" rounded="xl" />
-          <Image boxSize="128px" objectFit="cover" src="/e.webp" rounded="xl" />
+        <SimpleGrid columns={{ base: 1, md: 4 }} spacing="150px" wrap="wrap">
+          <Image boxSize="256px" objectFit="cover" src="/a.png" rounded="xl" />
 
-          <Image boxSize="128px" objectFit="cover" src="/g.png" rounded="xl" />
-          <Image boxSize="128px" objectFit="cover" src="/h.png" rounded="xl" />
-          <Image boxSize="128px" objectFit="cover" src="/i.png" rounded="xl" />
-          <Image boxSize="128px" objectFit="cover" src="/j.png" rounded="xl" />
-          <Image boxSize="128px" objectFit="cover" src="/k.png" rounded="xl" />
-          <Image boxSize="128px" objectFit="cover" src="/l.png" rounded="xl" />
-          <Image boxSize="128px" objectFit="cover" src="/m.png" rounded="xl" />
+          <Image boxSize="256px" objectFit="cover" src="/c.png" rounded="xl" />
+          <Image boxSize="256px" objectFit="cover" src="/d.png" rounded="xl" />
+
+          <Image boxSize="256px" objectFit="cover" src="/i.png" rounded="xl" />
+
+          <Image boxSize="256px" objectFit="cover" src="/k.png" rounded="xl" />
+          <Image boxSize="256px" objectFit="cover" src="/l.png" rounded="xl" />
+          <Image boxSize="256px" objectFit="cover" src="/m.png" rounded="xl" />
         </SimpleGrid>
       </Flex>
       <Flex
-        height="20px"
+        height="30px"
         bgColor="blue.800"
         justifyContent="center"
         align="center"
         textColor="gray.200"
         padding="12px"
       >
-        {" "}
-        <Text> © ALWI 2023 </Text>
+        <Text> © Copy Right by ALWI 2023</Text>
+      </Flex>
+      <Flex
+        height="30px"
+        bgColor="blue.800"
+        justifyContent="center"
+        align="center"
+        textColor="gray.200"
+        padding="12px"
+      >
+        <Text> Term of service </Text>
+      </Flex>
+      <Flex
+        height="30px"
+        bgColor="blue.800"
+        justifyContent="center"
+        align="center"
+        textColor="gray.200"
+        padding="12px"
+      >
+        <Text> Privacy Policy </Text>
       </Flex>
     </Flex>
   );
